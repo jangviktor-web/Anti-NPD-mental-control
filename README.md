@@ -1,4 +1,6 @@
 <div align="center">
+  
+<img width="1280" height="640" alt="B-规格表-1280x640" src="https://github.com/user-attachments/assets/dada54c4-af71-43dc-a287-d64bce3ac195" />
 
 # 反NPD精神控制的实用操作说明书
 
