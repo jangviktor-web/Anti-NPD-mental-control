@@ -1,0 +1,199 @@
+@charset "UTF-8";
+/* ============================================================
+   《反NPD精神控制的实用操作说明书》· 印刷/电子书版式（WeasyPrint）
+   开本 170×240mm（16 开）｜正文宋体系（Noto Serif CJK SC）
+   ============================================================ */
+
+@page{
+  size: 170mm 240mm;
+  margin: 21mm 17mm 19mm 19mm;
+  @top-center{
+    content: "反NPD精神控制的实用操作说明书";
+    font-family: "Noto Sans CJK SC";
+    font-size: 7.6pt; color: #9a9a9a; letter-spacing: .06em;
+  }
+  @bottom-center{
+    content: counter(page);
+    font-family: "Noto Serif CJK SC";
+    font-size: 9pt; color: #555;
+  }
+}
+
+/* 无页眉页脚的页面：封面 */
+@page cover{ margin: 0; @top-center{content:none} @bottom-center{content:none} }
+/* 无页眉页码的页面：版权页、目录 */
+@page plain{ @top-center{content:none} @bottom-center{content:none} }
+
+html{
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 10.5pt;
+  line-height: 1.78;
+  color: #111;
+}
+body{margin:0;}
+
+/* ---------- 封面 ---------- */
+.cover{
+  page: cover;
+  box-sizing: border-box;
+  height: 240mm;
+  padding: 26mm 20mm 18mm;
+  display: flex;
+  flex-direction: column;
+}
+.cover .kicker{
+  font-family:"Noto Sans CJK SC"; font-size:9pt; color:#3A7C6D;
+  letter-spacing:.22em; margin:0 0 8mm;
+}
+.cover h1{
+  font-size:30pt; font-weight:700; line-height:1.32; margin:0 0 6mm;
+  letter-spacing:.01em;
+}
+.cover .sub{
+  font-size:12pt; color:#41564F; margin:0 0 12mm; line-height:1.7;
+}
+.cover .spectrum{display:flex; height:7mm; margin:0 0 4mm;}
+.cover .spectrum span{flex:1;}
+.cover .spectrum .s1{background:#CFE3DA;flex:2.2;}
+.cover .spectrum .s2{background:#E2DCC0;flex:2.2;}
+.cover .spectrum .s3{background:#E3CBB6;flex:2.2;}
+.cover .spectrum .s4{background:#DDB3AC;flex:1.6;}
+.cover .scale{
+  display:flex; font-family:"Noto Sans CJK SC"; font-size:7.6pt; color:#7d8e88;
+  border-top:.5pt solid #c8d6d1; padding-top:2mm; margin:0 0 auto;
+}
+.cover .scale span{flex:2.2; padding-right:2mm;}
+.cover .scale span:last-child{flex:1.6;}
+.cover .foot{font-family:"Noto Sans CJK SC"; font-size:8.4pt; color:#6E827C; line-height:1.9;}
+.cover .foot .rule{display:block; border-top:1.2pt solid #0E2B27; width:22mm; margin:0 0 3mm;}
+
+/* ---------- 版权页 ---------- */
+.copyright{page:plain; break-before:page; padding-top:6mm; font-size:9pt; line-height:1.9; color:#333;}
+.copyright h1{
+  font-size:14pt; font-weight:700; margin:0 0 6mm; padding-bottom:2mm;
+  border-bottom:1.2pt solid #0E2B27;
+}
+.copyright p{margin:0 0 3.2mm; text-indent:0; text-align:justify;}
+.copyright ul{margin:0 0 3.2mm; padding-left:1.5em;}
+.copyright li{margin:0 0 2.4mm; text-align:justify;}
+.copyright .meta{
+  margin-top:10mm; padding-top:3mm; border-top:.5pt solid #ccc;
+  font-family:"Noto Sans CJK SC"; font-size:8.4pt; color:#666;
+}
+
+/* ---------- 目录 ---------- */
+.toc{page:plain; break-before:page;}
+.toc h1{
+  font-size:17pt; font-weight:700; margin:0 0 8mm; padding-bottom:2.5mm;
+  border-bottom:1.2pt solid #0E2B27;
+}
+.toc-part{
+  font-family:"Noto Sans CJK SC"; font-size:10pt; font-weight:700;
+  margin:6.5mm 0 2mm; color:#0E2B27;
+}
+.toc-row{display:flex; align-items:baseline; margin:0 0 1.4mm;}
+.toc-row .tt{flex:1; padding-right:3mm;}
+.toc-row .tp{white-space:nowrap; font-family:"Noto Sans CJK SC"; font-size:9pt; color:#555;}
+.toc-row .tp a{text-decoration:none; color:#555;}
+.toc-row .tp a::after{content: target-counter(attr(href), page);}
+.toc-row.sub .tt{padding-left:5mm; color:#3c4f4a;}
+
+/* ---------- 前言与正文 ---------- */
+.frontmatter{break-before:page;}
+.frontmatter h2{
+  font-size:14pt; font-weight:700; margin:0 0 5mm; padding-bottom:2mm;
+  border-bottom:1.2pt solid #0E2B27; break-after:avoid;
+}
+.frontmatter h2 + p{margin-top:0;}
+
+.chapter{break-before:page;}
+h1.chapter-title{
+  font-size:19pt; font-weight:700; line-height:1.42;
+  margin:2mm 0 7mm; padding-bottom:3mm;
+  border-bottom:1.5pt solid #0E2B27;
+  break-after:avoid;
+}
+
+.part-page{
+  break-before:page;
+  box-sizing:border-box; height:198mm; padding-top:56mm;
+  text-align:center;
+}
+.part-page .part-no{
+  font-family:"Noto Sans CJK SC"; font-size:10pt; letter-spacing:.2em;
+  color:#3A7C6D; margin:0 0 6mm;
+}
+.part-page h1{
+  font-size:21pt; font-weight:700; line-height:1.45; margin:0 auto 7mm; max-width:118mm;
+}
+.part-page .lede{
+  font-size:10pt; color:#41564F; line-height:1.9; max-width:112mm; margin:0 auto;
+  text-align:justify; text-indent:0;
+}
+
+/* 标点与段落 */
+p{margin:0 0 1.6mm; text-indent:2em; text-align:justify;}
+h2{font-size:13.5pt; font-weight:700; margin:8mm 0 2.6mm; break-after:avoid; text-indent:0;}
+h3{font-size:11.4pt; font-weight:700; margin:5.4mm 0 1.8mm; break-after:avoid; text-indent:0;}
+h4{font-size:10.6pt; font-weight:700; margin:4mm 0 1.4mm; break-after:avoid; text-indent:0;}
+strong{font-weight:700;}
+ul,ol{margin:1.2mm 0 2.6mm; padding-left:1.9em;}
+li{margin:0 0 1.2mm; text-align:justify;}
+hr{border:0; border-top:.5pt solid #d5d5d5; margin:6mm 0;}
+code{font-family:"Noto Sans CJK SC"; font-size:9pt; background:#f1f4f2; padding:0 .3em;}
+
+/* 话术引用块 */
+blockquote{
+  margin:3mm 0 3.4mm 1.6em; padding:2.6mm 4mm;
+  background:#F1F6F4; border-left:2.6pt solid #3A7C6D;
+  break-inside:avoid;
+}
+blockquote p{text-indent:0; margin:0 0 1.4mm; font-size:10pt;}
+blockquote p:last-child{margin-bottom:0;}
+blockquote strong{color:#2A5D52;}
+
+/* 本章依据 */
+aside.source{
+  margin:6mm 0 0; padding-top:2.2mm; border-top:.5pt solid #cfcfcf;
+  font-family:"Noto Sans CJK SC"; font-size:8.4pt; line-height:1.8; color:#6a6a6a;
+  text-indent:0;
+}
+aside.source strong{color:#4a4a4a;}
+
+/* 表格 */
+table{
+  width:100%; border-collapse:collapse; margin:3mm 0 4mm;
+  font-family:"Noto Sans CJK SC"; font-size:8.6pt; line-height:1.55;
+}
+thead{display:table-header-group;}
+tr{break-inside:avoid;}
+th,td{border:.5pt solid #b9c8c3; padding:1.4mm 2mm; text-align:left; vertical-align:top; text-indent:0;}
+th{background:#EDF3F1; font-weight:700;}
+td{font-family:"Noto Serif CJK SC";}
+
+/* 危险分级着色（印刷用深色） */
+.lv{font-weight:700;}
+.lv1{color:#2F6B5C;} .lv2{color:#8A6D1F;} .lv3{color:#A8542B;} .lv4{color:#8E2B27;}
+
+/* 结尾断后 */
+.finale{break-before:page;}
+.finale h1{
+  font-size:17pt; font-weight:700; margin:0 0 6mm; padding-bottom:2.5mm;
+  border-bottom:1.5pt solid #0E2B27;
+}
+.colophon{
+  break-before:page; page:plain; padding-top:20mm;
+  font-family:"Noto Sans CJK SC"; font-size:8.4pt; color:#666; line-height:1.9;
+}
+.colophon p{text-indent:0; margin:0 0 2.4mm;}
+
+/* ---------- 封面补充（覆盖全局段落规则） ---------- */
+.cover{display:flex;flex-direction:column;}
+.cover p{text-indent:0;margin:0;}
+.cover .kicker{margin-bottom:9mm;}
+.cover h1{font-size:30pt;line-height:1.34;margin:0 0 7mm;}
+.cover .sub{margin-bottom:13mm;}
+.cover .spectrum{margin-bottom:3mm;}
+.cover .foot{margin-top:auto;}
+.cover .foot p{font-family:"Noto Sans CJK SC";font-size:8.6pt;color:#6E827C;line-height:1.9;margin:0 0 1.8mm;}
+.cover .foot .rule{display:block;border-top:1.2pt solid #0E2B27;width:22mm;margin:0 0 3.5mm;}
