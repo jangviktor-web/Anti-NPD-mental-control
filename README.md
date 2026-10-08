@@ -23,7 +23,7 @@
 <table>
 <tr><td align="right"><b>下载</b></td><td align="left">
 
-[PDF 电子书](反NPD精神控制的实用操作说明书.pdf) · [单文件网页](index.html) · [合订本 Markdown](反NPD精神控制的实用操作说明书.md) · [分章压缩包](反NPD精神控制的实用操作说明书-分章.zip)
+[PDF 电子书](反NPD精神控制的实用操作说明书.pdf) · [单文件网页](index.html) · [合订本 Markdown](反NPD精神控制的实用操作说明书.md) · [分章压缩包](https://github.com/jangviktor-web/Anti-NPD/archive/refs/heads/main.zip)
 
 </td></tr>
 <tr><td align="right"><b>按需查</b></td><td align="left">
